@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { CalendarDays, MapPin, Menu, MessageCircle, Phone } from "lucide-react";
+import { CalendarDays, MapPin, MessageCircle, Phone } from "lucide-react";
+import MobileNavigation from "@/components/layout/mobile-navigation";
 
 const links = [
   ["Accueil", "#accueil"],
@@ -98,34 +99,9 @@ export default function Header() {
               <CalendarDays size={17} strokeWidth={2} />
               Prendre rendez-vous
             </a>
-            <details className="group relative hidden max-[1050px]:block">
-              <summary
-                aria-label="Ouvrir la navigation"
-                className="grid size-10 cursor-pointer list-none place-items-center rounded-lg border border-[#dce5f1] text-[#172748] transition-colors hover:border-clinic hover:text-clinic [&::-webkit-details-marker]:hidden"
-              >
-                <Menu size={19} />
-              </summary>
-              <nav
-                className="absolute right-0 top-[calc(100%+12px)] grid min-w-[210px] gap-1 rounded-xl border border-[#e1e8f1] bg-white p-2 shadow-[0_15px_35px_rgba(17,34,61,0.15)]"
-                aria-label="Navigation mobile"
-              >
-                {links.map(([label, href]) => (
-                  <a
-                    className="rounded-lg px-3 py-2.5 text-[13px] font-medium text-[#344258] hover:bg-[#f3f8fd] hover:text-clinic"
-                    href={href}
-                    key={href}
-                  >
-                    {label}
-                  </a>
-                ))}
-                <a
-                  className="mt-1 rounded-lg bg-clinic px-3 py-2.5 text-[13px] font-semibold text-white hover:bg-clinic-dark"
-                  href="#rendez-vous"
-                >
-                  Prendre rendez-vous
-                </a>
-              </nav>
-            </details>
+            <div className="hidden max-[1050px]:block">
+              <MobileNavigation />
+            </div>
           </div>
         </div>
       </div>
