@@ -40,7 +40,11 @@ export default function Header() {
             rel="noreferrer"
             aria-label="Écrire à la clinique sur WhatsApp"
           >
-            <MessageCircle className="text-[#83b2ff]" size={14} strokeWidth={2.1} />
+            <MessageCircle
+              className="text-[#83b2ff]"
+              size={14}
+              strokeWidth={2.1}
+            />
             <span>WhatsApp</span>
           </a>
         </div>

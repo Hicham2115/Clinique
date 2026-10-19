@@ -10,10 +10,11 @@ export default function Hero() {
       <div className="absolute inset-0 -z-20 max-md:top-auto max-md:h-[62%]">
         <Image
           className="object-cover object-center max-md:object-[63%_center]"
-          src="/images/hero-clinician-upscaled.png"
+          src="/images/hero-clinician-hq.png"
           alt="Une professionnelle de santé dans un cabinet dentaire moderne"
           fill
           priority
+          quality={95}
           sizes="100vw"
         />
       </div>
@@ -34,8 +35,8 @@ export default function Hero() {
             notre <span className="text-clinic">attention.</span>
           </h1>
           <p className="mt-7 max-w-[450px] text-[16px] leading-[1.7] text-[#4b5b70] max-sm:mt-5 max-sm:max-w-[320px] max-sm:text-[14px]">
-            À Casablanca, nous prenons le temps de vous écouter, de vous expliquer
-            vos soins et de vous accompagner à chaque étape.
+            À Casablanca, nous prenons le temps de vous écouter, de vous
+            expliquer vos soins et de vous accompagner à chaque étape.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4 max-sm:mt-7">
             <a
