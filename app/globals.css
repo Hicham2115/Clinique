@@ -16,6 +16,26 @@
   --font-display: Arial, Helvetica, sans-serif;
 }
 
+.footer-flip-link {
+  display: inline-block;
+  transform-origin: center;
+  backface-visibility: hidden;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .footer-flip-link:hover,
+  .footer-flip-link:focus-visible {
+    animation: footer-link-flip 520ms cubic-bezier(.2, .75, .25, 1);
+  }
+}
+
+@keyframes footer-link-flip {
+  0% { transform: perspective(500px) rotateX(0); }
+  45% { transform: perspective(500px) rotateX(90deg); }
+  55% { transform: perspective(500px) rotateX(270deg); }
+  100% { transform: perspective(500px) rotateX(360deg); }
+}
+
 @layer base {
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; scroll-padding-top: 24px; }

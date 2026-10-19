@@ -3,8 +3,8 @@ import Image from "next/image";
 import { CurrentYear } from "@/components/current-year";
 
 const flipClass =
-  "transform-gpu [transform-style:preserve-3d] [perspective:500px] duration-500 hover:[transform:rotateX(360deg)] focus-visible:[transform:rotateX(360deg)] motion-reduce:transition-none";
-const linkClass = `${flipClass} w-fit text-[14px] leading-7 text-[#aeb9ca] underline decoration-transparent underline-offset-4 transition-[color,text-decoration-color,transform] hover:text-white hover:decoration-[#7da2ff] focus-visible:text-white focus-visible:decoration-[#7da2ff]`;
+  "footer-flip-link underline decoration-transparent underline-offset-4 transition-colors hover:text-white hover:decoration-[#7da2ff] focus-visible:text-white focus-visible:decoration-[#7da2ff]";
+const linkClass = `${flipClass} w-fit text-[14px] leading-7 text-[#aeb9ca]`;
 const headingClass =
   "mb-4 text-[11px] font-bold tracking-[.12em] text-white uppercase";
 
@@ -90,9 +90,9 @@ export default function SiteFooter() {
         <div className="flex flex-wrap items-center justify-between gap-4 py-6 text-[11px] text-[#aeb9ca] max-[520px]:items-start">
           <span>© <CurrentYear /> Clinique Dentaire Khair. Tous droits réservés.</span>
           <span className="flex flex-wrap items-center gap-x-2">
-            Conçu avec soin à Casablanca <span className="text-white/30">·</span>
+            Designed &amp; developed by{" "}
             <a
-              className={`${flipClass} underline decoration-transparent underline-offset-4 transition-[color,text-decoration-color,transform] hover:text-white hover:decoration-[#7da2ff] focus-visible:text-white focus-visible:decoration-[#7da2ff]`}
+              className={`${flipClass} text-[#aeb9ca]`}
               href="https://www.stallionadvertising.ma/"
               target="_blank"
               rel="noopener noreferrer"

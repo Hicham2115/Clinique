@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SmoothScroll from "@/components/layout/smooth-scroll";
 import CustomCursor from "@/components/layout/custom-cursor";
+import ScrollToTop from "@/components/layout/scroll-to-top";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +15,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="fr">
       <body>
         <CustomCursor />
-        <SmoothScroll>{children}</SmoothScroll>
+        <SmoothScroll>
+          {children}
+          <ScrollToTop />
+        </SmoothScroll>
       </body>
     </html>
   );
