@@ -14,7 +14,7 @@ export default function ClinicImageMark({ className }: ClinicImageMarkProps) {
         alt=""
         className="h-auto w-[29px]"
         height={210}
-        src="/images/clinic-mark.png"
+        src="/images/clinic-mark.webp"
         width={408}
       />
     </span>

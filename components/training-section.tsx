@@ -6,7 +6,7 @@ export default function TrainingSection() {
     <section className="relative mx-auto w-[min(100%_-_9vw,1280px)] py-[100px] max-[1100px]:w-[min(100%_-_7vw,1280px)] max-[820px]:w-[min(100%_-_44px,680px)] max-[820px]:py-[64px] max-[520px]:w-[calc(100%_-_36px)] max-[520px]:py-12" id="formation">
       <div className="relative min-h-[490px] overflow-hidden rounded-[30px] bg-[#e7edf6] max-[820px]:min-h-0 max-[820px]:overflow-visible max-[820px]:rounded-[22px]">
         <div className="absolute inset-0 max-[820px]:relative max-[820px]:h-[390px] max-[520px]:h-[260px] max-[820px]:overflow-hidden max-[820px]:rounded-[22px]">
-          <Image className="object-cover object-center" src="/images/training-workshop-khair.png" alt="Formation de dentistes dans un espace de la Clinique Dentaire Khair à Casablanca" fill sizes="(max-width: 820px) 100vw, 92vw" />
+          <Image className="object-cover object-center" src="/images/training-workshop-khair.webp" alt="Formation de dentistes dans un espace de la Clinique Dentaire Khair à Casablanca" fill sizes="(max-width: 820px) 100vw, 92vw" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#101b2c]/65 via-[#101b2c]/20 to-transparent max-[820px]:bg-gradient-to-t max-[820px]:from-[#101b2c]/45 max-[820px]:via-transparent" />
           <span className="absolute top-7 right-7 inline-flex items-center gap-2 rounded-full border border-white/65 bg-white/90 px-4 py-3 text-[9px] font-extrabold tracking-[.14em] text-[#172541] shadow-sm max-[520px]:top-4 max-[520px]:right-4 max-[520px]:px-3 max-[520px]:py-[10px]"><BookOpenText size={15}/> KHAIR / ESPACE FORMATION</span>
         </div>

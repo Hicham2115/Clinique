@@ -10,10 +10,12 @@ import ReviewsSection from "@/components/reviews-section";
 import FAQSection from "@/components/faq-section";
 import ContactSection from "@/components/contact-section";
 import SiteFooter from "@/components/site-footer";
+import ScrollReveal from "@/components/scroll-reveal";
 
 export default function Home() {
   return (
     <>
+      <ScrollReveal />
       <Header />
       <main>
         <Hero />

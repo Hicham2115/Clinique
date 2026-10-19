@@ -11,22 +11,22 @@ export default function Hero() {
       <div className="absolute inset-0 -z-20 max-md:hidden">
         <Image
           className="object-cover object-center"
-          src="/images/hero-clinician-hq.png"
+          src="/images/hero-clinician-hq.webp"
           alt="Une professionnelle de santé dans un cabinet dentaire moderne"
           fill
           priority
-          quality={95}
+          quality={85}
           sizes="100vw"
         />
       </div>
       <div className="relative hidden h-[min(58vw,560px)] min-h-[300px] max-md:block max-sm:h-[360px]">
         <Image
           className="object-cover object-[63%_center]"
-          src="/images/hero-clinician-hq.png"
+          src="/images/hero-clinician-hq.webp"
           alt="Une professionnelle de santé dans un cabinet dentaire moderne"
           fill
           priority
-          quality={95}
+          quality={85}
           sizes="100vw"
         />
       </div>
@@ -37,7 +37,7 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto flex h-full min-h-[680px] max-w-[1460px] items-center px-8 py-16 max-md:min-h-0 max-md:items-start max-md:px-5 max-md:py-12 max-sm:px-4 max-sm:py-10">
-        <div className="max-w-[640px] max-md:max-w-[550px]">
+        <div className="hero-copy max-w-[640px] max-md:max-w-[550px]">
           <p className="mb-6 flex items-center gap-3 text-[11px] font-bold tracking-[0.17em] text-[#41659c] uppercase max-sm:mb-5 max-sm:text-[9px]">
             <span className="h-[2px] w-8 bg-clinic" aria-hidden="true" />
             Clinique Dentaire Khair · Casablanca

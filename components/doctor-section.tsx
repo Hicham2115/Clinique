@@ -12,7 +12,7 @@ export default function DoctorSection() {
         <div className="relative min-h-[430px] overflow-hidden rounded-[26px] bg-[#e8edf4] shadow-[0_24px_58px_rgba(28,51,87,.13)] max-[820px]:min-h-[360px] max-[520px]:min-h-[270px]">
           <Image
             className="object-cover"
-            src="/images/dental-room.png"
+            src="/images/dental-room.webp"
             alt="Espace de consultation de la clinique dentaire"
             fill
             sizes="(max-width: 820px) 100vw, 42vw"

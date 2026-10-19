@@ -30,7 +30,7 @@ export default function SiteFooter() {
           <div className="max-w-[330px]">
             <a aria-label="Clinique Dentaire Khair, accueil" className="inline-flex items-center gap-3" href="#accueil">
               <span className="grid size-12 place-items-center rounded-xl bg-white p-1.5">
-                <Image alt="" className="h-auto w-full" height={270} src="/images/clinic-logo.png" width={442} />
+                <Image alt="" className="h-auto w-full" height={270} src="/images/clinic-logo.webp" width={442} />
               </span>
               <span>
                 <span className="block text-[15px] font-bold tracking-[.13em]">KHAIR</span>

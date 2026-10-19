@@ -60,7 +60,7 @@ export default function Header() {
           >
             <Image
               className="h-auto w-[74px] max-sm:w-[63px]"
-              src="/images/clinic-mark.png"
+              src="/images/clinic-mark.webp"
               width={408}
               height={210}
               alt=""

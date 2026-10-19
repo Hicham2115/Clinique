@@ -16,7 +16,7 @@ import Image from "next/image";
 const disciplines = [
   {
     name: "Dentisterie générale",
-    image: "/images/services/general-dentistry.png",
+    image: "/images/services/general-dentistry.webp",
     imageAlt: "Dentiste réalisant un examen dentaire dans un cabinet lumineux",
     description:
       "Consultations, bilans bucco-dentaires, prévention et soins courants : un premier point de contact pour votre santé dentaire.",
@@ -24,7 +24,7 @@ const disciplines = [
   },
   {
     name: "Parodontologie",
-    image: "/images/services/periodontology.png",
+    image: "/images/services/periodontology.webp",
     imageAlt: "Examen dentaire attentif dans un cabinet moderne",
     description:
       "Un parcours consacré aux gencives et aux tissus qui soutiennent les dents, avec une prise en charge définie après examen.",
@@ -32,7 +32,7 @@ const disciplines = [
   },
   {
     name: "Endodontie",
-    image: "/images/services/endodontics.png",
+    image: "/images/services/endodontics.webp",
     imageAlt:
       "Modèle anatomique d’une dent utilisé pour expliquer les soins endodontiques",
     description:
@@ -41,7 +41,7 @@ const disciplines = [
   },
   {
     name: "Chirurgie orale",
-    image: "/images/services/oral-surgery.png",
+    image: "/images/services/oral-surgery.webp",
     imageAlt:
       "Équipe médicale préparant un soin chirurgical en cabinet dentaire",
     description:
@@ -50,7 +50,7 @@ const disciplines = [
   },
   {
     name: "Implantologie",
-    image: "/images/services/implantology.png",
+    image: "/images/services/implantology.webp",
     imageAlt:
       "Praticien présentant un modèle d’implant dentaire à une patiente",
     description:
@@ -59,7 +59,7 @@ const disciplines = [
   },
   {
     name: "Orthodontie",
-    image: "/images/services/orthodontics.png",
+    image: "/images/services/orthodontics.webp",
     imageAlt:
       "Praticien expliquant un traitement orthodontique à une jeune patiente",
     description:
@@ -68,7 +68,7 @@ const disciplines = [
   },
   {
     name: "Dentisterie esthétique",
-    image: "/images/services/aesthetic-dentistry.png",
+    image: "/images/services/aesthetic-dentistry.webp",
     imageAlt: "Dentiste et patiente discutant de l’esthétique du sourire",
     description:
       "Un échange autour de l’apparence du sourire et des solutions envisageables, selon vos attentes et le bilan clinique.",
@@ -76,7 +76,7 @@ const disciplines = [
   },
   {
     name: "Prothèses dentaires",
-    image: "/images/services/dental-prosthetics.png",
+    image: "/images/services/dental-prosthetics.webp",
     imageAlt: "Prothèse dentaire en céramique examinée en laboratoire",
     description:
       "Des solutions pour restaurer ou remplacer des dents, étudiées avec le praticien en fonction de votre situation.",
@@ -84,7 +84,7 @@ const disciplines = [
   },
   {
     name: "Dentisterie pédiatrique",
-    image: "/images/services/pediatric-dentistry.png",
+    image: "/images/services/pediatric-dentistry.webp",
     imageAlt:
       "Dentiste accueillant un enfant dans un cabinet dentaire rassurant",
     description:

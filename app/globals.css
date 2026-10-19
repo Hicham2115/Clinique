@@ -62,3 +62,34 @@
 @media (prefers-reduced-motion: reduce) {
   .custom-cursor { transition: none; }
 }
+
+@keyframes hero-copy-enter {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-copy > * {
+    animation: hero-copy-enter 700ms cubic-bezier(.2,.7,.2,1) both;
+  }
+  .hero-copy > :nth-child(1) { animation-delay: 80ms; }
+  .hero-copy > :nth-child(2) { animation-delay: 160ms; }
+  .hero-copy > :nth-child(3) { animation-delay: 240ms; }
+  .hero-copy > :nth-child(4) { animation-delay: 320ms; }
+  .hero-copy > :nth-child(5) { animation-delay: 400ms; }
+
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 650ms ease, transform 650ms cubic-bezier(.2,.7,.2,1);
+  }
+  .scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy > * { animation: none; }
+  .scroll-reveal { opacity: 1; transform: none; transition: none; }
+}
