@@ -1,0 +1,11 @@
+import { ArrowUpRight, Mic2, ShieldCheck } from "lucide-react";
+
+export default function VoiceAssistantSection() {
+  return (
+    <section className="mx-auto grid w-[min(100%_-_9vw,1280px)] grid-cols-[70px_1fr_.86fr] items-center gap-[26px] py-[62px] max-[1100px]:w-[min(100%_-_7vw,1280px)] max-[820px]:w-[min(100%_-_44px,680px)] max-[820px]:grid-cols-[56px_1fr] max-[820px]:gap-3 max-[820px]:py-[44px] max-[520px]:w-[calc(100%_-_36px)] max-[520px]:grid-cols-1 max-[520px]:gap-4" id="assistant-vocal">
+      <div className="grid size-[60px] place-items-center rounded-full border border-[#cfdbef] bg-[#f4f7fc] text-clinic max-[820px]:size-12"><Mic2 size={28} strokeWidth={1.4}/></div>
+      <div className="max-[820px]:col-start-2 max-[520px]:col-start-1"><span className="text-[9px] font-extrabold tracking-[.14em] text-[#718097]">PROJET D’ASSISTANT VOCAL — QBOT</span><h2 className="my-[13px] mb-[14px] text-[clamp(31px,3.2vw,44px)] leading-none font-medium tracking-[-.07em] text-[#141a25]">Une voix pour accueillir.<br/><em className="text-clinic not-italic">Un relais pour l’équipe.</em></h2><p className="mb-[17px] max-w-[490px] text-xs leading-[1.7] text-[#6e7a8c]">Un projet d’assistant pour répondre aux questions pratiques et recueillir les demandes de rendez-vous afin de faciliter le suivi par l’équipe.</p><a className="inline-flex items-center gap-2.5 border-b border-[#8096bc] pb-[3px] text-[13px] font-bold text-[#17243b] [&_svg]:transition-transform hover:[&_svg]:translate-x-1" href="#contact">Parler du projet <ArrowUpRight size={16}/></a></div>
+      <div className="flex flex-col gap-[11px] rounded-[15px] border border-[#e1e8f1] bg-[#f8faff] p-[22px] max-[820px]:col-span-full max-[520px]:col-span-1"><span className="inline-flex items-center gap-[7px] text-[8px] font-extrabold tracking-[.1em] text-[#73829a]"><i className="size-[7px] rounded-full bg-[#e0a632]"/> PROJET · AGENT NON ACTIVÉ</span><b className="text-base text-[#1c293e]">Assistant Khair</b><span className="text-[10px] text-[#758195]">Accueil · Informations · Demande de rendez-vous</span><p className="mt-1 flex items-start gap-[7px] border-t border-[#e2e8f0] pt-3 text-[9px] leading-[1.55] text-[#78869a]"><ShieldCheck className="shrink-0 text-clinic" size={15}/> Les enregistrements ne seront réalisés qu’après information et accord du client.</p></div>
+    </section>
+  );
+}
