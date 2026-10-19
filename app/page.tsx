@@ -6,7 +6,6 @@ import DoctorSection from "@/components/doctor-section";
 import ImagingSection from "@/components/imaging-section";
 import TrainingSection from "@/components/training-section";
 import PartnershipSection from "@/components/partnership-section";
-import VoiceAssistantSection from "@/components/voice-assistant-section";
 import ReviewsSection from "@/components/reviews-section";
 import FAQSection from "@/components/faq-section";
 import ContactSection from "@/components/contact-section";
@@ -24,7 +23,6 @@ export default function Home() {
         <ImagingSection />
         <TrainingSection />
         <PartnershipSection />
-        <VoiceAssistantSection />
         <ReviewsSection />
         <FAQSection />
         <ContactSection />

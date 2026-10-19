@@ -14,7 +14,10 @@ const benefits = [
 
 export default function ImagingSection() {
   return (
-    <section className="bg-[#f5f8fd] py-[78px] max-[820px]:py-[52px]" id="imagerie">
+    <section
+      className="bg-[#f5f8fd] py-[78px] max-[820px]:py-[52px]"
+      id="imagerie"
+    >
       <div className="mx-auto w-[min(100%_-_9vw,1280px)] max-[1100px]:w-[min(100%_-_7vw,1280px)] max-[820px]:w-[min(100%_-_44px,680px)] max-[520px]:w-[calc(100%_-_36px)]">
         <div className="mb-8 grid grid-cols-[1.05fr_.95fr] items-end gap-12 max-[820px]:grid-cols-1 max-[820px]:gap-4">
           <div>
@@ -38,15 +41,11 @@ export default function ImagingSection() {
         <div className="relative mx-auto h-[420px] w-full max-w-[1060px] overflow-hidden rounded-[26px] bg-[#e3ebf6] shadow-[0_24px_58px_rgba(28,51,87,.13)] max-[820px]:h-[360px] max-[520px]:h-[270px]">
           <Image
             className="object-cover object-center"
-            src="/images/dental-imaging.png"
+            src="/images/dental-imaging-branded.png"
             alt="Équipement d’imagerie dentaire dans une salle lumineuse"
             fill
             sizes="(max-width: 820px) 100vw, 1060px"
           />
-          <span className="absolute top-5 left-5 inline-flex items-center gap-2 rounded-full border border-white/75 bg-white/95 px-4 py-2.5 text-[9px] font-bold tracking-[0.13em] text-[#172541] shadow-[0_5px_18px_rgba(17,32,55,.1)] max-[520px]:top-3 max-[520px]:left-3">
-            <ScanLine size={16} className="text-clinic" aria-hidden="true" />
-            ESPACE IMAGERIE
-          </span>
         </div>
 
         <div className="mx-auto mt-8 grid max-w-[1280px] grid-cols-[.82fr_.82fr_1.36fr] border-t border-[#dce5f1] max-[820px]:grid-cols-2 max-[520px]:grid-cols-1">
@@ -55,7 +54,10 @@ export default function ImagingSection() {
               className={`py-6 pr-7 max-[820px]:pr-5 max-[520px]:py-5 max-[520px]:pr-0 ${index > 0 ? "border-l border-[#dce5f1] pl-7 max-[820px]:pl-5 max-[520px]:border-l-0 max-[520px]:border-t max-[520px]:pl-0" : ""}`}
               key={title}
             >
-              <span className="mb-4 block h-[2px] w-8 bg-clinic" aria-hidden="true" />
+              <span
+                className="mb-4 block h-[2px] w-8 bg-clinic"
+                aria-hidden="true"
+              />
               <strong className="mb-2 block text-[21px] leading-[1.2] font-semibold tracking-[-0.035em] text-[#17243b] max-[520px]:text-[19px]">
                 {title}
               </strong>
@@ -65,7 +67,10 @@ export default function ImagingSection() {
             </div>
           ))}
           <div className="border-l border-[#dce5f1] py-6 pl-8 max-[820px]:col-span-full max-[820px]:border-t max-[820px]:border-l-0 max-[820px]:pl-0 max-[520px]:py-5">
-            <span className="mb-4 block h-[2px] w-8 bg-clinic" aria-hidden="true" />
+            <span
+              className="mb-4 block h-[2px] w-8 bg-clinic"
+              aria-hidden="true"
+            />
             <h3 className="mb-2 max-w-[480px] text-[21px] leading-[1.25] font-semibold tracking-[-0.03em] text-[#17243b] max-[520px]:text-[19px]">
               Comprendre chaque étape de votre visite.
             </h3>

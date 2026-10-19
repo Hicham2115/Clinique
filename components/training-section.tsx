@@ -1,12 +1,29 @@
 import Image from "next/image";
-import ClinicImageMark from "@/components/clinic-image-mark";
 import { ArrowUpRight, BookOpenText } from "lucide-react";
 
 export default function TrainingSection() {
   return (
-    <section className="mx-auto grid w-[min(100%_-_9vw,1280px)] grid-cols-2 items-center gap-[7%] py-[74px] max-[1100px]:w-[min(100%_-_7vw,1280px)] max-[820px]:w-[min(100%_-_44px,680px)] max-[820px]:grid-cols-1 max-[820px]:gap-6 max-[820px]:py-[50px] max-[520px]:w-[calc(100%_-_36px)]" id="formation">
-      <div className="relative order-2 min-h-[340px] overflow-hidden rounded-clinic bg-[#e8edf4] shadow-[0_16px_40px_rgba(28,51,87,.08)] max-[820px]:order-none max-[820px]:min-h-[300px] max-[520px]:min-h-[235px]"><Image className="object-cover" src="/images/training-room.png" alt="Salle de formation et de rencontres professionnelles" fill sizes="(max-width: 760px) 100vw, 50vw"/><span className="absolute top-4 left-4 inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/90 px-3 py-[9px] text-[8px] font-extrabold tracking-[.12em] text-[#172541]"><BookOpenText size={15}/> KHAIR / ESPACE FORMATION</span><ClinicImageMark className="right-4 bottom-4"/></div>
-      <div className="order-1 max-[820px]:order-none"><span className="text-[9px] font-extrabold tracking-[.14em] text-[#718097]">TRANSMETTRE & ÉCHANGER</span><h2 className="my-[17px] mb-[21px] text-[clamp(38px,4vw,56px)] leading-[.99] font-medium tracking-[-.075em] text-[#141a25] max-[520px]:text-[39px]">Le savoir prend vie<br />quand il se <em className="text-clinic not-italic">partage.</em></h2><p className="max-w-[620px] text-[16px] leading-[1.8] text-[#202938] max-[520px]:text-[14px]">Un espace dédié aux futurs ateliers, rencontres professionnelles et démonstrations : l’occasion de partager les connaissances, de faire découvrir les innovations et d’échanger autour des soins dentaires et de l’imagerie médicale.</p><p className="mt-[18px] text-[11px] text-[#8a95a5]">Programme proposé : thèmes, intervenants et dates à valider par la clinique.</p><a className="mt-[7px] inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-clinic px-5 text-[13px] font-bold text-white transition hover:-translate-y-0.5 hover:bg-clinic-dark hover:shadow-[0_8px_24px_rgba(31,78,164,.2)]" href="#contact">Découvrir l’espace formation <ArrowUpRight size={16}/></a></div>
+    <section className="relative mx-auto w-[min(100%_-_9vw,1280px)] py-[100px] max-[1100px]:w-[min(100%_-_7vw,1280px)] max-[820px]:w-[min(100%_-_44px,680px)] max-[820px]:py-[64px] max-[520px]:w-[calc(100%_-_36px)] max-[520px]:py-12" id="formation">
+      <div className="relative min-h-[490px] overflow-hidden rounded-[30px] bg-[#e7edf6] max-[820px]:min-h-0 max-[820px]:overflow-visible max-[820px]:rounded-[22px]">
+        <div className="absolute inset-0 max-[820px]:relative max-[820px]:h-[390px] max-[520px]:h-[260px] max-[820px]:overflow-hidden max-[820px]:rounded-[22px]">
+          <Image className="object-cover object-center" src="/images/training-workshop-khair.png" alt="Formation de dentistes dans un espace de la Clinique Dentaire Khair à Casablanca" fill sizes="(max-width: 820px) 100vw, 92vw" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#101b2c]/65 via-[#101b2c]/20 to-transparent max-[820px]:bg-gradient-to-t max-[820px]:from-[#101b2c]/45 max-[820px]:via-transparent" />
+          <span className="absolute top-7 right-7 inline-flex items-center gap-2 rounded-full border border-white/65 bg-white/90 px-4 py-3 text-[9px] font-extrabold tracking-[.14em] text-[#172541] shadow-sm max-[520px]:top-4 max-[520px]:right-4 max-[520px]:px-3 max-[520px]:py-[10px]"><BookOpenText size={15}/> KHAIR / ESPACE FORMATION</span>
+        </div>
+
+        <div className="relative z-10 flex min-h-[490px] items-center px-[7%] py-14 max-[820px]:min-h-0 max-[820px]:-mt-12 max-[820px]:px-5 max-[820px]:py-0 max-[820px]:pb-5">
+          <div className="w-full max-w-[620px] rounded-[24px] border border-white/70 bg-white/95 p-7 shadow-[0_24px_70px_rgba(13,31,61,.18)] backdrop-blur-sm max-[520px]:rounded-[19px] max-[520px]:p-6">
+            <span className="inline-flex items-center gap-3 text-[9px] font-extrabold tracking-[.17em] text-[#718097]"><span className="h-px w-7 bg-clinic"/> TRANSMETTRE & ÉCHANGER</span>
+            <h2 className="my-4 text-[clamp(36px,3.7vw,50px)] leading-[1] font-medium tracking-[-.075em] text-[#141a25] max-[520px]:my-4 max-[520px]:text-[36px]">Le savoir prend vie quand il se <em className="text-clinic not-italic">partage.</em></h2>
+            <p className="text-[14px] leading-[1.7] text-[#354154] max-[520px]:text-[14px]">Un espace dédié aux futurs ateliers, rencontres professionnelles et démonstrations : l’occasion de partager les connaissances, de faire découvrir les innovations et d’échanger autour des soins dentaires et de l’imagerie médicale.</p>
+            <div className="mt-5 flex items-end justify-between gap-4 border-t border-[#e5eaf1] pt-4 max-[520px]:mt-5 max-[520px]:flex-col max-[520px]:items-start">
+              <p className="max-w-[230px] text-[11px] leading-[1.6] text-[#8994a4]">Programme proposé : thèmes, intervenants et dates à valider par la clinique.</p>
+              <a className="inline-flex min-h-11 shrink-0 items-center justify-center gap-3 rounded-full bg-clinic px-5 text-[12px] font-bold text-white transition hover:-translate-y-0.5 hover:bg-clinic-dark hover:shadow-[0_8px_24px_rgba(31,78,164,.2)] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-clinic" href="#contact">Découvrir l’espace <ArrowUpRight size={15}/></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span aria-hidden="true" className="absolute bottom-7 left-0 hidden -rotate-90 origin-bottom-left text-[8px] font-extrabold tracking-[.2em] text-[#9aa5b4] min-[821px]:block">KHAIR · TRANSMISSION DU SAVOIR</span>
     </section>
   );
 }
