@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, ScanLine } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const benefits = [
   {

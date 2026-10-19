@@ -1,15 +1,92 @@
-import { ArrowUpRight, Heart } from "lucide-react";
+import { ArrowUpRight, MapPin, MessageCircle, Phone } from "lucide-react";
+import Image from "next/image";
 import CurrentYear from "@/components/current-year";
+
+const linkClass = "w-fit text-[13px] leading-6 text-[#a6a8ad] underline decoration-transparent underline-offset-4 transition-[color,text-decoration-color] duration-200 hover:text-white hover:decoration-teal-400 focus-visible:text-white focus-visible:decoration-teal-400";
+const headingClass = "mb-5 text-[10px] font-extrabold tracking-[.19em] text-[#7ea3ff]";
 
 export default function SiteFooter() {
   return (
-    <footer className="bg-night px-[4.5vw] pt-9 pb-4 text-[#eaf0fa]">
-      <div className="mx-auto grid max-w-[1280px] grid-cols-[1.3fr_.9fr_.75fr_.65fr] gap-10 pb-8 max-[820px]:grid-cols-2 max-[820px]:gap-6"><div><a className="inline-flex items-center gap-[10px]" href="#accueil"><span className="grid size-[34px] place-items-center rounded-full border-2 border-clinic text-[13px] font-extrabold text-clinic">K</span><span className="flex flex-col gap-0.5 text-white"><b className="text-lg leading-none tracking-[.16em]">KHAIR</b><small className="text-[8px] font-bold tracking-[.18em]">CLINIQUE DENTAIRE</small></span></a><p className="mt-4 text-sm leading-[1.7] text-[#ccd5e3]">مصحة طب الأسنان خير<br/><span className="text-[10px]">Clinique Dentaire Khair</span></p></div>
-        <div className="flex flex-col items-start gap-[11px] text-[11px] leading-[1.55] text-[#d4deed]"><small className="mb-[3px] text-[8px] font-extrabold tracking-[.16em] text-[#93a7c5]">NOUS TROUVER</small><span>Boulevard Panoramique<br/>Casablanca — Maroc</span><a className="inline-flex items-center gap-[5px] transition hover:text-[#91b6ff]" href="https://maps.google.com/?q=Clinique+dentaire+KHAIR+Casablanca" target="_blank" rel="noreferrer">Itinéraire <ArrowUpRight size={14}/></a></div>
-        <div className="flex flex-col items-start gap-[11px] text-[11px] leading-[1.55] text-[#d4deed]"><small className="mb-[3px] text-[8px] font-extrabold tracking-[.16em] text-[#93a7c5]">NOUS CONTACTER</small><a className="transition hover:text-[#91b6ff]" href="tel:+212522228746">05 22 22 87 46</a><a className="inline-flex items-center gap-[5px] transition hover:text-[#91b6ff]" href="https://wa.me/212522228746" target="_blank" rel="noreferrer">WhatsApp <ArrowUpRight size={14}/></a></div>
-        <div className="flex flex-col items-start gap-[11px] text-[11px] leading-[1.55] text-[#d4deed]"><small className="mb-[3px] text-[8px] font-extrabold tracking-[.16em] text-[#93a7c5]">VOTRE PARCOURS</small><a className="transition hover:text-[#91b6ff]" href="#soins">Nos soins</a><a className="transition hover:text-[#91b6ff]" href="#imagerie">Imagerie</a><a className="transition hover:text-[#91b6ff]" href="#contact">Contact</a></div>
+    <footer className="relative overflow-hidden border-t-[3px] border-clinic bg-[#1c1e21] px-[4vw] text-white max-[520px]:px-5">
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-8 top-[-105px] select-none text-[540px] leading-none font-black tracking-[-.12em] text-white/[.018] max-[800px]:right-[-65px] max-[800px]:top-[-32px] max-[800px]:text-[360px]"
+      >
+        K
+      </span>
+
+      <div className="relative mx-auto max-w-[1400px]">
+        <div className="grid grid-cols-[1.45fr_.85fr_.85fr_1.15fr] gap-12 py-[76px] max-[980px]:grid-cols-2 max-[980px]:gap-x-10 max-[980px]:gap-y-12 max-[520px]:grid-cols-1 max-[520px]:gap-9 max-[520px]:py-12">
+          <div className="max-w-[330px]">
+            <a aria-label="Clinique Dentaire Khair, accueil" className="inline-flex items-center gap-3" href="#accueil">
+              <span className="grid size-12 place-items-center rounded-xl bg-white p-1.5">
+                <Image alt="" className="h-auto w-full" height={270} src="/images/clinic-logo.png" width={442} />
+              </span>
+              <span>
+                <span className="block text-[15px] font-bold tracking-[.13em]">KHAIR</span>
+                <span className="mt-1 block text-[8px] font-bold tracking-[.17em] text-[#9299a4]">CLINIQUE DENTAIRE</span>
+              </span>
+            </a>
+            <p className="mt-5 text-[13px] leading-[1.8] text-[#a6a8ad]">
+              Une attention humaine, au cœur de chaque sourire.
+            </p>
+            <span className="mt-6 inline-flex items-center gap-2 border border-white/10 px-3 py-2 text-[9px] font-bold tracking-[.15em] text-[#a6a8ad]">
+              <span className="size-1.5 rounded-full bg-clinic" aria-hidden="true" />
+              CASABLANCA · MAROC
+            </span>
+          </div>
+
+          <nav aria-label="Nos soins" className="flex flex-col items-start">
+            <h2 className={headingClass}>LA CLINIQUE</h2>
+            <a className={linkClass} href="#accueil">Accueil</a>
+            <a className={linkClass} href="#clinique">À propos</a>
+            <a className={linkClass} href="#soins">Nos soins</a>
+            <a className={linkClass} href="#praticien">Le praticien</a>
+          </nav>
+
+          <nav aria-label="Votre parcours" className="flex flex-col items-start">
+            <h2 className={headingClass}>VOTRE PARCOURS</h2>
+            <a className={linkClass} href="#imagerie">Imagerie</a>
+            <a className={linkClass} href="#formation">Espace formation</a>
+            <a className={linkClass} href="#contact">Questions fréquentes</a>
+            <a className={linkClass} href="#rendez-vous">Rendez-vous</a>
+          </nav>
+
+          <div className="flex flex-col items-start">
+            <h2 className={headingClass}>PARLONS ENSEMBLE</h2>
+            <a className="mb-4 inline-flex items-center gap-3 text-[13px] text-[#c5c7cb] underline decoration-transparent underline-offset-4 transition-[color,text-decoration-color] duration-200 hover:text-white hover:decoration-teal-400 focus-visible:text-white focus-visible:decoration-teal-400" href="tel:+212522228746">
+              <Phone size={15} className="text-clinic" aria-hidden="true" />
+              05 22 22 87 46
+              <ArrowUpRight size={13} className="text-[#777e89]" aria-hidden="true" />
+            </a>
+            <a className="mb-4 inline-flex items-center gap-3 text-[13px] text-[#c5c7cb] underline decoration-transparent underline-offset-4 transition-[color,text-decoration-color] duration-200 hover:text-white hover:decoration-teal-400 focus-visible:text-white focus-visible:decoration-teal-400" href="https://wa.me/212522228746" target="_blank" rel="noreferrer">
+              <MessageCircle size={15} className="text-clinic" aria-hidden="true" />
+              Écrire sur WhatsApp
+              <ArrowUpRight size={13} className="text-[#777e89]" aria-hidden="true" />
+            </a>
+            <a className="inline-flex items-start gap-3 text-[13px] leading-6 text-[#a6a8ad] underline decoration-transparent underline-offset-4 transition-[color,text-decoration-color] duration-200 hover:text-white hover:decoration-teal-400 focus-visible:text-white focus-visible:decoration-teal-400" href="https://maps.google.com/?q=Clinique+dentaire+KHAIR+Casablanca" target="_blank" rel="noreferrer">
+              <MapPin size={15} className="mt-1 shrink-0 text-clinic" aria-hidden="true" />
+              <span>Boulevard Panoramique<br />Casablanca, Maroc</span>
+            </a>
+          </div>
+        </div>
+
+        <div className="relative flex flex-wrap items-center justify-between gap-3 border-t border-white/10 py-5 text-[10px] text-[#737983]">
+          <span>© <CurrentYear /> Clinique Dentaire Khair. Tous droits réservés.</span>
+          <span>CONÇU AVEC SOIN À CASABLANCA <span className="ml-2 inline-block h-px w-7 align-middle bg-clinic" /></span>
+        </div>
       </div>
-      <div className="mx-auto flex max-w-[1280px] items-center justify-between border-t border-white/15 pt-[17px] text-[8px] font-bold tracking-[.12em] text-[#8798b2]"><span>© <CurrentYear/> CLINIQUE DENTAIRE KHAIR</span><span className="flex items-center gap-[7px]">CONÇU AVEC SOIN À CASABLANCA <Heart className="text-[#91b6ff]" size={13}/></span><a className="text-[#cbd6e7]" href="#accueil">HAUT DE PAGE ↑</a></div>
+      <p className="mx-auto max-w-[1440px] px-6 py-4 text-center text-[12px] text-white/70 sm:px-8 lg:px-12">
+        Designed &amp; developed by{" "}
+        <a
+          href="https://www.stallionadvertising.ma/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mb-20 underline decoration-transparent underline-offset-2 transition-colors duration-200 hover:text-white hover:decoration-teal-400 focus-visible:text-white focus-visible:decoration-teal-400"
+        >
+          Stallion Advertising
+        </a>
+      </p>
     </footer>
   );
 }
