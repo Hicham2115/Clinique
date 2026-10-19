@@ -26,7 +26,7 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto flex h-full min-h-[680px] max-w-[1460px] items-center px-8 py-16 max-md:min-h-[740px] max-md:items-start max-md:px-5 max-md:pt-16 max-sm:min-h-[780px] max-sm:px-4 max-sm:pt-12">
-        <div className="max-w-[590px] max-md:max-w-[550px]">
+        <div className="max-w-[640px] max-md:max-w-[550px]">
           <p className="mb-6 flex items-center gap-3 text-[11px] font-bold tracking-[0.17em] text-[#41659c] uppercase max-sm:mb-5 max-sm:text-[9px]">
             <span className="h-[2px] w-8 bg-clinic" aria-hidden="true" />
             Clinique Dentaire Khair · Casablanca

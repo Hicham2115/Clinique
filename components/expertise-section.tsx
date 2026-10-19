@@ -108,7 +108,7 @@ export default function ExpertiseSection() {
               <br />à <span className="text-clinic">vos besoins.</span>
             </h2>
           </div>
-          <p className="mb-1 max-w-[445px] text-[15px] leading-[1.8] text-[#0f0f10] max-[820px]:max-w-[560px] max-[520px]:text-[14px]">
+          <p className="mb-1 max-w-[600px] text-[16px] leading-[1.8] text-[#202938] max-[820px]:max-w-[640px] max-[520px]:text-[14px]">
             Une prise en charge complète pour chaque patient. Votre praticien
             évalue votre situation et vous explique les options après
             consultation.
@@ -144,7 +144,7 @@ export default function ExpertiseSection() {
                       {name}
                     </h3>
                   </div>
-                  <p className="m-0 max-w-[350px] pr-7 text-[13px] leading-[1.7] text-[#242528]">
+                  <p className="m-0 max-w-[380px] pr-7 text-[14px] leading-[1.75] text-[#202938]">
                     {description}
                   </p>
                   <ArrowRight
