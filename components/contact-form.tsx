@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "@tanstack/react-form";
 import { Select } from "@base-ui/react/select";
 import { Popover } from "@base-ui/react/popover";
@@ -207,6 +207,36 @@ function AppointmentDatePicker({
 
 export default function ContactForm() {
   const [sent, setSent] = useState(false);
+  const [disciplineOpen, setDisciplineOpen] = useState(false);
+
+  useEffect(() => {
+    if (!disciplineOpen) return;
+
+    const closeOnOutsideScroll = (event: WheelEvent | TouchEvent) => {
+      if (
+        event.target instanceof Element &&
+        event.target.closest("[data-lenis-prevent]")
+      ) {
+        return;
+      }
+      setDisciplineOpen(false);
+    };
+
+    window.addEventListener("wheel", closeOnOutsideScroll, {
+      capture: true,
+      passive: true,
+    });
+    window.addEventListener("touchmove", closeOnOutsideScroll, {
+      capture: true,
+      passive: true,
+    });
+
+    return () => {
+      window.removeEventListener("wheel", closeOnOutsideScroll, true);
+      window.removeEventListener("touchmove", closeOnOutsideScroll, true);
+    };
+  }, [disciplineOpen]);
+
   const form = useForm({
     defaultValues: {
       name: "",
@@ -325,6 +355,8 @@ export default function ContactForm() {
                 <div className="mb-5 flex flex-col gap-2.5">
                   <Select.Root
                     items={disciplineOptions}
+                    open={disciplineOpen}
+                    onOpenChange={(open) => setDisciplineOpen(open)}
                     value={field.state.value || null}
                     onValueChange={(value) =>
                       field.handleChange(String(value ?? ""))
@@ -353,7 +385,10 @@ export default function ContactForm() {
                         align="start"
                       >
                         <Select.Popup className="max-h-[min(320px,var(--available-height))] min-w-[var(--anchor-width)] origin-[var(--transform-origin)] overflow-hidden rounded-xl border border-[#dfe6ef] bg-white p-1.5 text-[#1d293a] shadow-[0_16px_42px_rgba(28,51,87,.16)] outline-none transition-[opacity,transform] duration-150 data-[starting-style]:scale-[.98] data-[starting-style]:opacity-0 data-[ending-style]:scale-[.98] data-[ending-style]:opacity-0 motion-reduce:transition-none">
-                          <Select.List className="max-h-[min(300px,var(--available-height))] overflow-y-auto">
+                          <Select.List
+                            className="max-h-[min(300px,var(--available-height))] overscroll-contain overflow-y-auto"
+                            data-lenis-prevent
+                          >
                             {disciplineOptions.map(({ label, value }) => (
                               <Select.Item
                                 className="flex min-h-10 cursor-pointer items-center justify-between gap-3 rounded-lg px-3 py-2 text-xs text-[#344053] outline-none data-[highlighted]:bg-[#edf3ff] data-[highlighted]:text-[#174fbf] data-[selected]:font-semibold"

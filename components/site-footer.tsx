@@ -2,9 +2,8 @@ import { ArrowUpRight, MapPin, MessageCircle, Phone } from "lucide-react";
 import Image from "next/image";
 import { CurrentYear } from "@/components/current-year";
 
-const flipClass =
-  "footer-flip-link underline decoration-transparent underline-offset-4 transition-colors hover:text-white hover:decoration-[#7da2ff] focus-visible:text-white focus-visible:decoration-[#7da2ff]";
-const linkClass = `${flipClass} w-fit text-[14px] leading-7 text-[#aeb9ca]`;
+const linkClass =
+  "w-fit text-[14px] leading-7 text-[#aeb9ca] underline decoration-transparent underline-offset-4 transition-[color,text-decoration-color] hover:text-white hover:decoration-[#7da2ff] focus-visible:text-white focus-visible:decoration-[#7da2ff]";
 const headingClass =
   "mb-4 text-[11px] font-bold tracking-[.12em] text-white uppercase";
 
@@ -92,7 +91,7 @@ export default function SiteFooter() {
           <span className="flex flex-wrap items-center gap-x-2">
             Designed &amp; developed by{" "}
             <a
-              className={`${flipClass} text-[#aeb9ca]`}
+              className="text-[#aeb9ca] underline decoration-transparent underline-offset-4 transition-[color,text-decoration-color] hover:text-white hover:decoration-[#7da2ff] focus-visible:text-white focus-visible:decoration-[#7da2ff]"
               href="https://www.stallionadvertising.ma/"
               target="_blank"
               rel="noopener noreferrer"
