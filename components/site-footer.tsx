@@ -1,6 +1,6 @@
 import { ArrowUpRight, MapPin, MessageCircle, Phone, Sparkles } from "lucide-react";
 import Image from "next/image";
-import CurrentYear from "@/components/current-year";
+import {CurrentYear} from "@/components/current-year";
 
 const linkClass = "w-fit text-[14px] leading-7 text-[#b7becb] underline decoration-transparent underline-offset-4 transition-[color,text-decoration-color] duration-200 hover:text-white hover:decoration-teal-400 focus-visible:text-white focus-visible:decoration-teal-400";
 const headingClass = "mb-5 text-[11px] font-extrabold tracking-[.17em] text-[#91b6ff]";
