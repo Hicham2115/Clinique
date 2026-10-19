@@ -42,7 +42,7 @@ const appointmentSchema = z.object({
 });
 
 const fieldClassName =
-  "min-h-12 w-full rounded-xl border border-[#dfe6ef] bg-[#f9fbff] px-4 py-3 text-[13px] font-medium text-[#1d293a] outline-none transition-colors placeholder:text-[#9aa6b7] hover:border-[#c3d2ec] focus:border-[#7fa5f2] focus:bg-white focus:shadow-[0_0_0_3px_rgba(39,101,232,.1)]";
+  "min-h-12 w-full rounded-[14px] border border-[#dce5f2] bg-[#f6f9ff] px-4 py-3 text-[13px] font-medium text-[#1d293a] outline-none transition-[border-color,background-color,box-shadow] placeholder:text-[#9aa6b7] hover:border-[#b8c9e6] focus:border-[#6f97ed] focus:bg-white focus:shadow-[0_0_0_4px_rgba(39,101,232,.1)]";
 
 function getErrorMessage(errors: unknown[]) {
   const firstError = errors[0];
@@ -225,7 +225,7 @@ export default function ContactForm() {
 
   return (
     <form
-      className="rounded-[24px] border border-[#e1e8f2] bg-white p-7 shadow-[0_20px_54px_rgba(28,51,87,.08)] max-[520px]:rounded-[20px] max-[520px]:p-[19px]"
+      className="rounded-[28px] border border-white/70 bg-white p-8 shadow-[0_30px_90px_rgba(4,15,32,.28)] ring-1 ring-[#9bb8ff]/20 max-[520px]:rounded-[22px] max-[520px]:p-5"
       noValidate
       onSubmit={(event) => {
         event.preventDefault();
@@ -233,20 +233,25 @@ export default function ContactForm() {
         void form.handleSubmit();
       }}
     >
-      <div className="relative -mx-7 -mt-7 mb-6 flex items-center justify-between gap-3 overflow-hidden rounded-t-[23px] bg-[#17243b] px-7 py-5 text-white max-[520px]:-mx-[19px] max-[520px]:-mt-[19px] max-[520px]:rounded-t-[19px] max-[520px]:px-5">
+      <div className="relative -mx-8 -mt-8 mb-6 flex items-center justify-between gap-3 overflow-hidden rounded-t-[27px] bg-[#17243b] px-8 py-6 text-white max-[520px]:-mx-5 max-[520px]:-mt-5 max-[520px]:rounded-t-[21px] max-[520px]:px-5">
         <span
-          className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#4d83ff] via-[#8db2ff] to-transparent"
+          className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#4d83ff] via-[#a8c1ff] to-transparent"
           aria-hidden="true"
         />
-        <div>
-          <span className="block text-[9px] font-extrabold tracking-[.15em] text-[#c2d0e6]">
-            RENDEZ-VOUS EN LIGNE
+        <div className="flex items-center gap-3.5">
+          <span className="grid size-11 shrink-0 place-items-center rounded-[15px] border border-white/10 bg-white/[0.08] text-[#a9c0ff] shadow-inner shadow-white/[0.04]">
+            <CalendarDays size={20} aria-hidden="true" />
           </span>
-          <span className="mt-1.5 block text-[15px] font-semibold tracking-[-.02em]">
-            Préparer une demande
-          </span>
+          <div>
+            <span className="block text-[9px] font-extrabold tracking-[.16em] text-[#b8c8e2]">
+              RENDEZ-VOUS EN LIGNE
+            </span>
+            <span className="mt-1.5 block text-[17px] font-semibold tracking-[-.03em]">
+              Préparer une demande
+            </span>
+          </div>
         </div>
-        <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/8 px-3 py-2 text-[8px] font-bold tracking-[.06em] text-[#d5e0f2]">
+        <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.08] px-3 py-2 text-[8px] font-bold tracking-[.08em] text-[#d5e0f2]">
           <ShieldCheck
             size={14}
             className="text-[#9bb9ff]"
@@ -278,7 +283,7 @@ export default function ContactForm() {
         </div>
       ) : (
         <>
-          <p className="mb-5 text-[11px] leading-[1.55] text-[#758195]">
+          <p className="mb-6 rounded-xl border-l-[3px] border-[#6e93ed] bg-[#f3f7ff] px-4 py-3 text-[11px] leading-[1.6] text-[#64738a]">
             Choisissez une discipline et une préférence de date. L’équipe
             confirmera tout rendez-vous selon ses disponibilités. Pour une
             urgence, appelez directement la clinique.
@@ -288,7 +293,7 @@ export default function ContactForm() {
             {(field) => {
               const error = getErrorMessage(field.state.meta.errors);
               return (
-                <label className="mb-4 flex flex-col gap-2 text-[11px] font-bold text-[#344053]">
+                <label className="mb-5 flex flex-col gap-2.5 text-[10px] font-extrabold tracking-[.04em] text-[#53647e]">
                   Nom de démonstration
                   <input
                     className={fieldClassName}
@@ -317,7 +322,7 @@ export default function ContactForm() {
             {(field) => {
               const error = getErrorMessage(field.state.meta.errors);
               return (
-                <div className="mb-4 flex flex-col gap-2">
+                <div className="mb-5 flex flex-col gap-2.5">
                   <Select.Root
                     items={disciplineOptions}
                     value={field.state.value || null}
@@ -325,7 +330,7 @@ export default function ContactForm() {
                       field.handleChange(String(value ?? ""))
                     }
                   >
-                    <Select.Label className="text-[11px] font-bold text-[#344053]">
+                    <Select.Label className="text-[10px] font-extrabold tracking-[.04em] text-[#53647e]">
                       Motif
                     </Select.Label>
                     <Select.Trigger
@@ -387,7 +392,7 @@ export default function ContactForm() {
             {(field) => {
               const error = getErrorMessage(field.state.meta.errors);
               return (
-                <label className="mb-4 flex flex-col gap-2 text-[11px] font-bold text-[#344053]">
+                <label className="mb-5 flex flex-col gap-2.5 text-[10px] font-extrabold tracking-[.04em] text-[#53647e]">
                   Date souhaitée
                   <AppointmentDatePicker
                     value={field.state.value}
@@ -412,14 +417,14 @@ export default function ContactForm() {
             {(field) => {
               const error = getErrorMessage(field.state.meta.errors);
               return (
-                <fieldset className="mb-5">
-                  <legend className="mb-2 text-[11px] font-bold text-[#344053]">
+                <fieldset className="mb-6">
+                  <legend className="mb-2.5 text-[10px] font-extrabold tracking-[.04em] text-[#53647e]">
                     Préférence horaire
                   </legend>
                   <div className="flex gap-3">
                     {["Matin", "Après-midi"].map((time) => (
                       <label
-                        className="inline-flex min-h-10 flex-1 cursor-pointer items-center gap-2 rounded-lg border border-[#dfe6ef] px-3 text-xs text-[#344053] has-[:checked]:border-[#8aaaf0] has-[:checked]:bg-[#f3f7ff]"
+                        className="inline-flex min-h-11 flex-1 cursor-pointer items-center gap-2 rounded-xl border border-[#dce5f2] bg-[#f9fbff] px-3 text-xs text-[#344053] transition-colors hover:border-[#b8c9e6] has-[:checked]:border-[#8aaaf0] has-[:checked]:bg-[#f0f5ff] has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-[#6f97ed]"
                         key={time}
                       >
                         <input
@@ -478,7 +483,7 @@ export default function ContactForm() {
           </form.Field> */}
 
           <button
-            className="inline-flex min-h-12 w-full items-center justify-between rounded-full bg-clinic px-[17px] text-[13px] font-bold text-white transition hover:-translate-y-0.5 hover:bg-clinic-dark hover:shadow-[0_8px_24px_rgba(31,78,164,.2)]"
+            className="inline-flex min-h-[54px] w-full items-center justify-between rounded-[16px] bg-clinic px-5 text-[13px] font-bold text-white shadow-[0_10px_24px_rgba(39,101,232,.2)] transition hover:-translate-y-0.5 hover:bg-clinic-dark hover:shadow-[0_14px_30px_rgba(31,78,164,.3)] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#6f97ed]"
             type="submit"
           >
             Tester ma demande <ArrowRight size={16} aria-hidden="true" />
