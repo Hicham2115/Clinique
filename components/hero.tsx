@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ClinicImageMark from "@/components/clinic-image-mark";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 export default function Hero() {
@@ -18,8 +19,9 @@ export default function Hero() {
           sizes="100vw"
         />
       </div>
+      <ClinicImageMark className="right-7 bottom-7 max-md:right-5 max-md:bottom-5" />
       <div
-        className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#f8fbff_0%,rgba(248,251,255,0.98)_19%,rgba(248,251,255,0.75)_34%,transparent_54%)] max-md:bg-[linear-gradient(180deg,#f8fbff_0%,#f8fbff_35%,rgba(248,251,255,0.9)_49%,transparent_70%)]"
+        className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#f8fbff_0%,#f8fbff_31%,rgba(248,251,255,0.96)_38%,rgba(248,251,255,0.78)_43%,rgba(248,251,255,0.4)_48%,rgba(248,251,255,0.12)_52%,transparent_56%)] max-md:bg-[linear-gradient(180deg,#f8fbff_0%,#f8fbff_35%,rgba(248,251,255,0.9)_49%,transparent_70%)]"
         aria-hidden="true"
       />
 
@@ -29,14 +31,19 @@ export default function Hero() {
             <span className="h-[2px] w-8 bg-clinic" aria-hidden="true" />
             Clinique Dentaire Khair · Casablanca
           </p>
-          <h1 className="max-w-[590px] text-[clamp(54px,5.4vw,82px)] leading-[1.02] font-semibold tracking-[-0.055em] text-[#14233b] max-md:text-[clamp(48px,7vw,68px)] max-sm:text-[clamp(42px,11vw,54px)]">
-            Votre sourire,
+          <h1 className="max-w-[680px] text-[clamp(48px,4.8vw,72px)] leading-[1.02] font-semibold tracking-[-0.055em] text-[#14233b] max-md:max-w-[590px] max-md:text-[clamp(46px,6.8vw,64px)] max-sm:text-[clamp(40px,10.5vw,52px)]">
+            L’humain au cœur
             <br />
-            notre <span className="text-clinic">attention.</span>
+            de chaque <span className="text-clinic">sourire.</span>
           </h1>
-          <p className="mt-7 max-w-[450px] text-[16px] leading-[1.7] text-[#4b5b70] max-sm:mt-5 max-sm:max-w-[320px] max-sm:text-[14px]">
-            À Casablanca, nous prenons le temps de vous écouter, de vous
-            expliquer vos soins et de vous accompagner à chaque étape.
+          <p className="mt-6 max-w-[580px] text-[18px] leading-[1.65] font-medium text-[#202938] max-sm:mt-5 max-sm:max-w-[340px] max-sm:text-[15px]">
+            Bien plus que des soins, une attention particulière à l’égard de
+            chaque patient.
+          </p>
+          <p className="mt-3 max-w-[580px] text-[16px] leading-[1.75] text-[#202938] max-sm:max-w-[340px] max-sm:text-[14px]">
+            Découvrez un lieu où expertise, écoute et technologies de pointe se
+            conjuguent pour vous offrir une expérience de soin pensée autour de
+            vous.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4 max-sm:mt-7">
             <a
