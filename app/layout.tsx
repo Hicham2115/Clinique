@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import SmoothScroll from "@/components/layout/smooth-scroll";
 import CustomCursor from "@/components/layout/custom-cursor";
 import ScrollToTop from "@/components/layout/scroll-to-top";
+import ClinicChatbot from "@/components/clinic-chatbot";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <SmoothScroll>
           {children}
           <ScrollToTop />
+          <ClinicChatbot />
         </SmoothScroll>
       </body>
     </html>

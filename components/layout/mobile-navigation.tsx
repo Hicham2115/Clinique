@@ -18,12 +18,19 @@ const links = [
 export default function MobileNavigation() {
   const [open, setOpen] = useState(false);
 
+  function handleOpenChange(nextOpen: boolean) {
+    setOpen(nextOpen);
+    window.dispatchEvent(
+      new CustomEvent("clinic-mobile-navigation", { detail: nextOpen }),
+    );
+  }
+
   function closeDrawer() {
-    setOpen(false);
+    handleOpenChange(false);
   }
 
   return (
-    <Drawer.Root open={open} onOpenChange={setOpen} swipeDirection="right">
+    <Drawer.Root open={open} onOpenChange={handleOpenChange} swipeDirection="right">
       <Drawer.Trigger
         aria-label="Ouvrir la navigation"
         className="grid size-10 place-items-center rounded-lg border border-[#dce5f1] text-[#172748] transition-colors hover:border-clinic hover:text-clinic focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-clinic"
@@ -67,13 +74,14 @@ export default function MobileNavigation() {
               </nav>
 
               <div className="mt-auto border-t border-[#e8edf4] pt-6">
-                <Drawer.Close
-                  render={<a href="#rendez-vous" onClick={closeDrawer} />}
+                <a
+                  href="#rendez-vous"
+                  onClick={closeDrawer}
                   className="flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-clinic px-5 text-sm font-bold text-white shadow-[0_8px_20px_rgba(39,101,232,.2)] transition-colors hover:bg-clinic-dark"
                 >
                   <CalendarDays size={17} />
                   Prendre rendez-vous
-                </Drawer.Close>
+                </a>
                 <a className="mt-4 block text-center text-sm font-semibold text-[#344258]" href="tel:+212522228746">05 22 22 87 46</a>
               </div>
             </Drawer.Content>
