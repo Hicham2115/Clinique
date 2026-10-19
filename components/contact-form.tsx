@@ -87,10 +87,12 @@ function AppointmentDatePicker({
 }) {
   const selectedDate = dateFromValue(value);
   const [open, setOpen] = useState(false);
+  const [today, setToday] = useState("");
   const [month, setMonth] = useState(() => {
     const selected = dateFromValue(value);
-    return new Date((selected ?? new Date()).getFullYear(), (selected ?? new Date()).getMonth(), 1);
+    return new Date(selected?.getFullYear() ?? 2000, selected?.getMonth() ?? 0, 1);
   });
+
   const offset = (month.getDay() + 6) % 7;
   const firstDay = new Date(month.getFullYear(), month.getMonth(), 1 - offset);
   const days = Array.from({ length: 42 }, (_, index) =>
@@ -103,8 +105,11 @@ function AppointmentDatePicker({
 
   return (
     <Popover.Root open={open} onOpenChange={(nextOpen) => {
-      if (nextOpen && selectedDate) {
-        setMonth(new Date(selectedDate.getFullYear(), selectedDate.getMonth(), 1));
+      if (nextOpen) {
+        const currentDate = new Date();
+        setToday(dateToValue(currentDate));
+        const visibleDate = selectedDate ?? currentDate;
+        setMonth(new Date(visibleDate.getFullYear(), visibleDate.getMonth(), 1));
       }
       setOpen(nextOpen);
     }}>
@@ -153,7 +158,7 @@ function AppointmentDatePicker({
               {days.map((day) => {
                 const inMonth = day.getMonth() === month.getMonth();
                 const isSelected = Boolean(selectedDate && dateToValue(day) === dateToValue(selectedDate));
-                const isToday = dateToValue(day) === dateToValue(new Date());
+                const isToday = dateToValue(day) === today;
                 return (
                   <button
                     className={`mx-auto grid size-9 cursor-pointer place-items-center rounded-full text-xs transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2765e8] ${
@@ -183,7 +188,9 @@ function AppointmentDatePicker({
                 type="button"
                 onClick={() => {
                   const today = new Date();
-                  onChange(dateToValue(today));
+                  const todayValue = dateToValue(today);
+                  setToday(todayValue);
+                  onChange(todayValue);
                   setMonth(new Date(today.getFullYear(), today.getMonth(), 1));
                   setOpen(false);
                 }}

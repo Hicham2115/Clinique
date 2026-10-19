@@ -5,12 +5,23 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 export default function Hero() {
   return (
     <section
-      className="relative isolate min-h-[680px] overflow-hidden bg-[#f8fbff] lg:h-[min(82svh,820px)] max-md:min-h-[740px] max-sm:min-h-[780px]"
+      className="relative isolate min-h-[680px] overflow-hidden bg-[#f8fbff] lg:h-[min(82svh,820px)] max-md:min-h-0"
       id="accueil"
     >
-      <div className="absolute inset-0 -z-20 max-md:top-auto max-md:h-[62%]">
+      <div className="absolute inset-0 -z-20 max-md:hidden">
         <Image
-          className="object-cover object-center max-md:object-[63%_center]"
+          className="object-cover object-center"
+          src="/images/hero-clinician-hq.png"
+          alt="Une professionnelle de santé dans un cabinet dentaire moderne"
+          fill
+          priority
+          quality={95}
+          sizes="100vw"
+        />
+      </div>
+      <div className="relative hidden h-[min(58vw,560px)] min-h-[300px] max-md:block max-sm:h-[360px]">
+        <Image
+          className="object-cover object-[63%_center]"
           src="/images/hero-clinician-hq.png"
           alt="Une professionnelle de santé dans un cabinet dentaire moderne"
           fill
@@ -21,11 +32,11 @@ export default function Hero() {
       </div>
       <ClinicImageMark className="right-7 bottom-7 max-md:right-5 max-md:bottom-5" />
       <div
-        className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#f8fbff_0%,#f8fbff_31%,rgba(248,251,255,0.96)_38%,rgba(248,251,255,0.78)_43%,rgba(248,251,255,0.4)_48%,rgba(248,251,255,0.12)_52%,transparent_56%)] max-md:bg-[linear-gradient(180deg,#f8fbff_0%,#f8fbff_35%,rgba(248,251,255,0.9)_49%,transparent_70%)]"
+        className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#f8fbff_0%,#f8fbff_31%,rgba(248,251,255,0.96)_38%,rgba(248,251,255,0.78)_43%,rgba(248,251,255,0.4)_48%,rgba(248,251,255,0.12)_52%,transparent_56%)] max-md:hidden"
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto flex h-full min-h-[680px] max-w-[1460px] items-center px-8 py-16 max-md:min-h-[740px] max-md:items-start max-md:px-5 max-md:pt-16 max-sm:min-h-[780px] max-sm:px-4 max-sm:pt-12">
+      <div className="relative mx-auto flex h-full min-h-[680px] max-w-[1460px] items-center px-8 py-16 max-md:min-h-0 max-md:items-start max-md:px-5 max-md:py-12 max-sm:px-4 max-sm:py-10">
         <div className="max-w-[640px] max-md:max-w-[550px]">
           <p className="mb-6 flex items-center gap-3 text-[11px] font-bold tracking-[0.17em] text-[#41659c] uppercase max-sm:mb-5 max-sm:text-[9px]">
             <span className="h-[2px] w-8 bg-clinic" aria-hidden="true" />
