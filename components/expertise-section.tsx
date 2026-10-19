@@ -159,14 +159,14 @@ export default function ExpertiseSection() {
         </div>
 
         <a
-          className="group relative mt-4 flex min-h-[112px] items-center gap-5 overflow-hidden rounded-[22px] border border-[#263b5d] bg-[linear-gradient(110deg,#14233b_0%,#192b48_62%,#20385d_100%)] px-7 py-5 text-white shadow-[0_14px_32px_rgba(20,35,59,.12)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(20,35,59,.18)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#4168e8] max-[520px]:flex-wrap max-[520px]:gap-3 max-[520px]:px-5"
+          className="group relative mt-4 flex min-h-[112px] items-center gap-5 overflow-hidden rounded-[22px] border border-[#263b5d] bg-[linear-gradient(110deg,#14233b_0%,#192b48_62%,#20385d_100%)] px-7 py-5 text-white shadow-[0_14px_32px_rgba(20,35,59,.12)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(20,35,59,.18)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#4168e8] max-[520px]:flex-wrap max-[520px]:items-start max-[520px]:gap-3 max-[520px]:px-4 max-[520px]:py-4"
           href="tel:+212522228746"
         >
           <span className="absolute inset-y-5 left-0 w-[3px] rounded-r-full bg-[#5b86ff]" aria-hidden="true" />
           <span className="grid size-[54px] shrink-0 place-items-center rounded-2xl border border-white/10 bg-white/[0.08] text-[#a8c4ff] shadow-inner shadow-white/[0.04]">
             <PhoneCall size={21} strokeWidth={1.8} aria-hidden="true" />
           </span>
-          <span className="flex flex-1 flex-col gap-1.5">
+          <span className="flex min-w-0 flex-1 flex-col gap-1.5">
             <span className="text-[9px] font-bold tracking-[0.16em] text-[#a8c4ff] uppercase">
               Une situation dentaire à évaluer rapidement ?
             </span>
@@ -178,7 +178,7 @@ export default function ExpertiseSection() {
               pas un accueil permanent.
             </span>
           </span>
-          <span className="inline-flex min-h-11 shrink-0 items-center gap-3 rounded-full border border-white/15 bg-white/[0.06] px-5 text-[12px] font-semibold transition group-hover:border-white/25 group-hover:bg-white/10 max-[520px]:ml-[66px] max-[520px]:min-h-10 max-[520px]:px-4">
+          <span className="inline-flex min-h-11 shrink-0 items-center gap-3 rounded-full border border-white/15 bg-white/[0.06] px-5 text-[12px] font-semibold transition group-hover:border-white/25 group-hover:bg-white/10 max-[520px]:ml-0 max-[520px]:min-h-10 max-[520px]:w-full max-[520px]:basis-full max-[520px]:flex-wrap max-[520px]:justify-center max-[520px]:gap-x-2 max-[520px]:gap-y-1 max-[520px]:px-3 max-[520px]:text-center max-[380px]:text-[11px] max-[380px]:gap-x-1">
             Appeler la clinique
             <span className="text-[#c3cee0]">05 22 22 87 46</span>
             <ArrowRight

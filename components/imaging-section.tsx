@@ -38,9 +38,9 @@ export default function ImagingSection() {
           </p>
         </div>
 
-        <div className="relative mx-auto h-[420px] w-full max-w-[1060px] overflow-hidden rounded-[26px] bg-[#e3ebf6] shadow-[0_24px_58px_rgba(28,51,87,.13)] max-[820px]:h-[360px] max-[520px]:h-[270px]">
+        <div className="relative mx-auto h-[420px] w-full max-w-[1060px] overflow-hidden rounded-[26px] bg-[#e3ebf6] shadow-[0_24px_58px_rgba(28,51,87,.13)] max-[820px]:h-[360px] max-[520px]:h-[min(76vw,360px)] max-[520px]:min-h-[280px]">
           <Image
-            className="object-cover object-center"
+            className="object-cover object-center max-[520px]:object-[66%_center]"
             src="/images/dental-imaging-branded.webp"
             alt="Équipement d’imagerie dentaire dans une salle lumineuse"
             fill

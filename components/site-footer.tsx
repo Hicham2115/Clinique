@@ -3,22 +3,22 @@ import Image from "next/image";
 import { CurrentYear } from "@/components/current-year";
 
 const linkClass =
-  "w-fit text-[14px] leading-7 text-[#aeb9ca] underline decoration-transparent underline-offset-4 transition-[color,text-decoration-color] hover:text-white hover:decoration-[#7da2ff] focus-visible:text-white focus-visible:decoration-[#7da2ff]";
+  "w-fit max-w-full text-[14px] leading-7 text-[#aeb9ca] underline decoration-transparent underline-offset-4 transition-[color,text-decoration-color] hover:text-white hover:decoration-[#7da2ff] focus-visible:text-white focus-visible:decoration-[#7da2ff] max-[520px]:text-[12px]";
 const headingClass =
-  "mb-4 text-[11px] font-bold tracking-[.12em] text-white uppercase";
+  "mb-4 text-[11px] font-bold tracking-[.12em] text-white uppercase max-[520px]:text-[10px]";
 
 export default function SiteFooter() {
   return (
     <footer className="bg-white px-[clamp(14px,3vw,40px)] py-7 text-white">
-      <div className="relative isolate mx-auto max-w-[1440px] overflow-hidden rounded-[32px] border border-white/10 bg-[#0d1727] px-[5.5vw] text-white shadow-[0_24px_70px_rgba(13,23,39,.16)] max-[520px]:rounded-[24px] max-[520px]:px-5">
-        <div className="grid grid-cols-[1.65fr_1fr_1fr_1fr] gap-10 border-b border-white/10 py-[66px] max-[980px]:grid-cols-2 max-[980px]:gap-x-12 max-[980px]:gap-y-10 max-[760px]:py-11 max-[520px]:gap-x-7 max-[520px]:gap-y-9">
-          <div className="max-w-[380px] max-[980px]:col-span-2">
+      <div className="relative isolate mx-auto max-w-[1440px] overflow-hidden rounded-[32px] border border-white/10 bg-[#0d1727] px-[5.5vw] text-white shadow-[0_24px_70px_rgba(13,23,39,.16)] max-[520px]:rounded-[24px] max-[520px]:px-4">
+        <div className="grid grid-cols-[1.65fr_1fr_1fr_1fr] gap-10 border-b border-white/10 py-[66px] max-[980px]:grid-cols-2 max-[980px]:gap-x-12 max-[980px]:gap-y-10 max-[760px]:py-11 max-[520px]:gap-x-5 max-[520px]:gap-y-7 max-[380px]:grid-cols-1">
+          <div className="max-w-[380px] max-[980px]:col-span-2 max-[380px]:col-span-1">
             <a
               aria-label="Clinique Dentaire Khair, accueil"
               className="inline-flex items-center gap-3"
               href="#accueil"
             >
-              <span className="grid size-12 place-items-center rounded-xl bg-white p-1.5">
+                <span className="grid size-12 shrink-0 place-items-center rounded-xl bg-white p-1.5 max-[520px]:size-10">
                 <Image
                   alt=""
                   className="h-auto w-full"
@@ -28,7 +28,7 @@ export default function SiteFooter() {
                 />
               </span>
               <span>
-                <span className="block text-[16px] font-bold tracking-[.14em]">
+                  <span className="block text-[16px] font-bold tracking-[.14em] max-[520px]:text-[14px]">
                   KHAIR
                 </span>
                 <span className="mt-1 block text-[9px] font-bold tracking-[.16em] text-[#aeb9ca]">
@@ -36,7 +36,7 @@ export default function SiteFooter() {
                 </span>
               </span>
             </a>
-            <p className="mt-5 max-w-[350px] text-[14px] leading-[1.8] text-[#aeb9ca]">
+            <p className="mt-5 max-w-[350px] text-[14px] leading-[1.8] text-[#aeb9ca] max-[520px]:mt-3 max-[520px]:text-[12px]">
               Une attention humaine, au cœur de chaque sourire.
             </p>
           </div>
@@ -86,7 +86,7 @@ export default function SiteFooter() {
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-4 py-6 text-[11px] text-[#aeb9ca] max-[520px]:items-start">
+        <div className="flex flex-wrap items-center justify-between gap-4 py-6 text-[11px] text-[#aeb9ca] max-[520px]:items-start max-[520px]:gap-2 max-[520px]:py-5 max-[520px]:text-[10px]">
           <span>© <CurrentYear /> Clinique Dentaire Khair. Tous droits réservés.</span>
           <span className="flex flex-wrap items-center gap-x-2">
             Designed &amp; developed by{" "}
@@ -102,7 +102,7 @@ export default function SiteFooter() {
         </div>
         <p
           aria-hidden="true"
-          className="pointer-events-none mx-auto max-w-[1500px] overflow-hidden bg-gradient-to-r from-[#1b3152] via-[#6693ff] to-[#1b3152] bg-clip-text pb-6 text-center text-[clamp(90px,22vw,320px)] leading-[.72] font-black tracking-[-.105em] text-transparent select-none max-[520px]:text-[22vw]"
+          className="pointer-events-none mx-auto max-w-[1500px] overflow-hidden bg-gradient-to-r from-[#1b3152] via-[#6693ff] to-[#1b3152] bg-clip-text pb-6 text-center text-[clamp(90px,22vw,320px)] leading-[.72] font-black tracking-[-.105em] text-transparent select-none max-[520px]:text-[clamp(68px,18vw,96px)]"
         >
           KHAIR
         </p>
