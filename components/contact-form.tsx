@@ -319,14 +319,6 @@ export default function ContactForm() {
             </span>
           </div>
         </div>
-        <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.08] px-3 py-2 text-[8px] font-bold tracking-[.08em] text-[#d5e0f2]">
-          <ShieldCheck
-            size={14}
-            className="text-[#9bb9ff]"
-            aria-hidden="true"
-          />
-          DÉMO
-        </span>
       </div>
 
       <>
